@@ -21,7 +21,7 @@ A partir de um terminal/linha de comando:
 $ git clone https://github.com/MattZ6/routes-app.git
 
 # Adentre o repositório
-$ cd vuttr
+$ cd routes-app
 
 # Instale as dependências
 $ yarn
