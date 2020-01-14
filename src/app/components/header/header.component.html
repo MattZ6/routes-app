@@ -1,0 +1,25 @@
+<header class="header">
+  <div fxFlex fxLayoutAlign="space-between center">
+    <nav fxFlex fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="32px">
+      <a routerLink="/app" class="title">
+        🛫 BonVoyage
+      </a>
+
+      <ul fxFlex fxLayout="row" fxLayoutGap="8px">
+        <li>
+          <a routerLink="/app/experiences">Experiências</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div
+      class="signed"
+      fxLayout="row"
+      fxLayoutGap="8px"
+      fxLayoutAlign="center center"
+    >
+      <a routerLink="/app/profile">Meu perfil</a>
+      <button (click)="singOut()">Sair</button>
+    </div>
+  </div>
+</header>

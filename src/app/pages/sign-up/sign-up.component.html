@@ -1,0 +1,40 @@
+<main class="signup-page" fxFill fxLayoutAlign="center center">
+  <div>
+    <form
+      fxLayout="column"
+      fxLayoutGap="16px"
+      [formGroup]="form"
+      (ngSubmit)="submitForm()"
+    >
+      <h1>Criar conta gratuitamente</h1>
+
+      <label fxLayout="column" fxLayoutGap="8px">
+        <span>Nome</span>
+        <input placeholder="Seu nome completo" formControlName="name" />
+      </label>
+
+      <label fxLayout="column" fxLayoutGap="8px">
+        <span>E-mail</span>
+        <input
+          type="email"
+          placeholder="Seu melhor e-mail"
+          formControlName="email"
+        />
+      </label>
+
+      <label fxLayout="column" fxLayoutGap="8px">
+        <span>Senha</span>
+        <input
+          type="password"
+          placeholder="Somente letras e números"
+          maxlength="16"
+          formControlName="password"
+        />
+      </label>
+
+      <button type="submit">Criar conta</button>
+
+      <a routerLink="/signin">Já tenho uma conta</a>
+    </form>
+  </div>
+</main>

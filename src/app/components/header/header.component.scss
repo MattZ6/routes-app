@@ -1,0 +1,93 @@
+header.header {
+  height: 72px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(#000, 0.2);
+
+  > div {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 0 16px;
+    z-index: 10;
+
+    > nav {
+      > .title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #5aafff;
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid transparent;
+
+        transition: background 200ms;
+
+        &:hover {
+          background: #5aafff;
+          color: #fff;
+
+          transition: color 200ms;
+        }
+      }
+
+      > ul {
+        margin: 0;
+        padding: 0;
+
+        > li {
+          list-style: none;
+
+          > a {
+            font-size: 16px;
+            // color: #444;
+            padding: 8px;
+            transition: all 200ms;
+
+            &:hover {
+              color: #888;
+            }
+
+            &:active {
+              color: #222;
+            }
+          }
+        }
+      }
+    }
+
+    > div.signed {
+      > a {
+        font-size: 16px;
+        color: #444;
+        padding: 8px;
+        transition: color 200ms;
+
+        &:hover {
+          color: #888;
+        }
+
+        &:active {
+          color: #222;
+        }
+      }
+
+      > button {
+        color: #da2158;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 1.1px;
+        text-transform: uppercase;
+        background: none;
+        border: none;
+        padding: 8px;
+        transition: color 200ms;
+
+        &:hover {
+          color: #fa0e55;
+        }
+
+        &:active {
+          color: #d11a51;
+        }
+      }
+    }
+  }
+}

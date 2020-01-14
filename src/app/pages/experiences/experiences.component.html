@@ -1,0 +1,24 @@
+<div class="experiences_page" fxLayout="column" fxLayoutGap="16px">
+  <h1 class="page-title">Experiências</h1>
+
+  <ul fxFlex fxLayout="row" fxLayoutGap="16px">
+    <li *ngFor="let place of places">
+      <button fxLayout="column" (click)="navigate(place.locale)">
+        <img [src]="place.image" />
+        <div fxLayout="column" fxLayoutGap="4px">
+          <div fxLayout="row" fxLayoutAlign="space-between center">
+            <small>{{ place.locale }}</small>
+            <p fxLayoutAlign="center center">⭐ {{ place.stars }}</p>
+          </div>
+
+          <span>
+            A partir de
+            <br />
+            <b>{{ place.pricePerDay }}</b
+            >/pessoa (1 dia)
+          </span>
+        </div>
+      </button>
+    </li>
+  </ul>
+</div>
