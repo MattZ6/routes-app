@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-  Aplicação criada para exemplificação da utilização e gerenciamento de rotas no Angular.
+  Aplicação exemplo criada para demonstrar a utilização e gerenciamento de rotas no Angular.
 </h4>
  
 <p align="center">
@@ -12,7 +12,7 @@
 
 ## :information_source: Como usar
 
-Para clonar e rodar esta aplicação você irá precisar do [Git][git], [Node.js v10.16+][nodejs], [Angular CLI 8.3+][ngcli] & [Yarn][yarn] instalados na sua máquina.
+Para clonar e rodar esta aplicação você irá precisar do [Git][git], [Node.js v10.16+][nodejs], [Angular CLI 8.3+][ngcli] & [Yarn][yarn] (ou npm) instalados na sua máquina.
 
 A partir de um terminal/linha de comando:
 
@@ -24,7 +24,7 @@ $ git clone https://github.com/MattZ6/routes-app.git
 $ cd vuttr
 
 # Instale as dependências
-$ yarn install
+$ yarn
 
 # Inicie o projeto
 $ ng s
