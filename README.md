@@ -26,6 +26,9 @@ $ cd routes-app
 # Instale as dependências
 $ yarn
 
+# ou
+$ npm i
+
 # Inicie o projeto
 $ ng s
 
