@@ -1,13 +1,13 @@
-import { Component } from "@angular/core";
-import { FormBuilder, FormGroup } from "@angular/forms";
-import { Router } from "@angular/router";
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
-import { AuthService } from "src/app/services/auth/auth.service";
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
-  selector: "app-sign-up",
-  templateUrl: "./sign-up.component.html",
-  styleUrls: ["./sign-up.component.scss"]
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent {
   form: FormGroup;
@@ -18,15 +18,15 @@ export class SignUpComponent {
     private _router: Router
   ) {
     this.form = this._formBuilder.group({
-      name: [""],
-      email: [""],
-      password: [""]
+      name: [''],
+      email: [''],
+      password: ['']
     });
   }
 
   submitForm() {
     this._authService.signIn();
 
-    this._router.navigate(["app"]);
+    this._router.navigate(['app']);
   }
 }

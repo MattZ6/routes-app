@@ -1,10 +1,10 @@
-import { Component } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: "app-experience-details",
-  templateUrl: "./experience-details.component.html",
-  styleUrls: ["./experience-details.component.scss"]
+  selector: 'app-experience-details',
+  templateUrl: './experience-details.component.html',
+  styleUrls: ['./experience-details.component.scss']
 })
 export class ExperienceDetailsComponent {
   location: string;

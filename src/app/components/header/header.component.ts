@@ -1,12 +1,12 @@
-import { Component } from "@angular/core";
-import { Router } from "@angular/router";
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
-import { AuthService } from "src/app/services/auth/auth.service";
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
-  selector: "app-header",
-  templateUrl: "./header.component.html",
-  styleUrls: ["./header.component.scss"]
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   constructor(private _authProvider: AuthService, private _router: Router) {}
@@ -14,6 +14,6 @@ export class HeaderComponent {
   singOut() {
     this._authProvider.signOut();
 
-    this._router.navigate([""]);
+    this._router.navigate(['']);
   }
 }

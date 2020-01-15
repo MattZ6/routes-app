@@ -1,10 +1,10 @@
-import { Injectable } from "@angular/core";
-import { CanActivate, Router } from "@angular/router";
+import { Injectable } from '@angular/core';
+import { CanActivate, Router } from '@angular/router';
 
-import { AuthService } from "src/app/services/auth/auth.service";
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class PrivateGuard implements CanActivate {
   constructor(private _authService: AuthService, private _router: Router) {}
@@ -13,7 +13,7 @@ export class PrivateGuard implements CanActivate {
     if (this._authService.signed) {
       return true;
     } else {
-      this._router.navigate(["signin"]);
+      this._router.navigate(['signin']);
 
       return false;
     }

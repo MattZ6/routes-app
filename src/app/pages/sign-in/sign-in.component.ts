@@ -1,13 +1,13 @@
-import { Component } from "@angular/core";
-import { FormBuilder, FormGroup } from "@angular/forms";
-import { Router } from "@angular/router";
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
-import { AuthService } from "src/app/services/auth/auth.service";
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
-  selector: "app-sign-in",
-  templateUrl: "./sign-in.component.html",
-  styleUrls: ["./sign-in.component.scss"]
+  selector: 'app-sign-in',
+  templateUrl: './sign-in.component.html',
+  styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent {
   form: FormGroup;
@@ -18,14 +18,14 @@ export class SignInComponent {
     private _router: Router
   ) {
     this.form = this._formBuilder.group({
-      email: [""],
-      password: [""]
+      email: [''],
+      password: ['']
     });
   }
 
   submitForm() {
     this._authService.signIn();
 
-    this._router.navigate(["app"]);
+    this._router.navigate(['app']);
   }
 }
