@@ -24,7 +24,7 @@ $ git clone https://github.com/MattZ6/routes-app.git
 $ cd routes-app
 
 # Instale as dependências
-$ yarn (ou npm i)
+$ yarn
 
 # Inicie o projeto
 $ ng s
