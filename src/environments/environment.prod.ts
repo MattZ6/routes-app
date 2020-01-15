@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+
+  SIGNED_KEY: "@RoutesApp:signed"
 };

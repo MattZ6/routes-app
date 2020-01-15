@@ -21,6 +21,8 @@ import { ExperienceDetailsComponent } from "src/app/pages/experience-details/exp
 
 import { NotFoundComponent } from "src/app/pages/not-found/not-found.component";
 
+import { AuthService } from "src/app/services/auth/auth.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,7 @@ import { NotFoundComponent } from "src/app/pages/not-found/not-found.component";
     FlexLayoutModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

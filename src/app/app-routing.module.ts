@@ -1,6 +1,9 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
+import { PrivateGuard } from "src/app/guards/private/private.guard";
+import { GuestGuard } from "src/app/guards/guest/guest.guard";
+
 import { AuthLayoutComponent } from "src/app/layouts/auth/auth.component";
 import { MainLayoutComponent } from "src/app/layouts/main/main.component";
 
@@ -17,6 +20,7 @@ import { NotFoundComponent } from "src/app/pages/not-found/not-found.component";
 const routes: Routes = [
   {
     path: "",
+    canActivate: [GuestGuard],
     component: AuthLayoutComponent,
     children: [
       { path: "", pathMatch: "full", redirectTo: "signin" },
@@ -26,6 +30,7 @@ const routes: Routes = [
   },
   {
     path: "app",
+    canActivate: [PrivateGuard],
     component: MainLayoutComponent,
     children: [
       { path: "", pathMatch: "full", component: HomeComponent },
@@ -36,14 +41,6 @@ const routes: Routes = [
   },
   { path: "**", component: NotFoundComponent }
 ];
-
-// const routes: Routes = [
-//   { path: "signin", component: SignInComponent },
-//   { path: "signup", component: SignUpComponent },
-//   { path: "", pathMatch: "full", component: HomeComponent },
-//   { path: "places", component: PlacesComponent },
-//   { path: "profile", component: ProfileComponent }
-// ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
